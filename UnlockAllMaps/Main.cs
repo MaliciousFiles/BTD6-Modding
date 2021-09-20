@@ -25,6 +25,7 @@ namespace UnlockAllMaps
             {
                 foreach (KeyValuePair<string, MapInfo> entry in Game.instance.playerService.Player.Data.mapInfo.maps)
                 {
+                    Game.instance.playerService.Player.Data.mapInfo.SeenNewMapDifficulty(entry.key);
                     Game.instance.playerService.Player.Data.mapInfo.UnlockMap(entry.key);
                     Game.instance.playerService.Player.Data.mapInfo.SeenNewMap(entry.key);
                 }
