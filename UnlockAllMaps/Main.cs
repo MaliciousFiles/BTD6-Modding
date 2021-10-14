@@ -1,7 +1,6 @@
 ﻿using Assets.Scripts.Models.Profile;
 using Assets.Scripts.Unity;
 using Assets.Scripts.Unity.UI_New.Main;
-using BTD_Mod_Helper;
 using HarmonyLib;
 using Il2CppSystem.Collections.Generic;
 using MelonLoader;
@@ -10,12 +9,12 @@ using MelonLoader;
 [assembly: MelonGame("Ninja Kiwi", "BloonsTD6")]
 namespace UnlockAllMaps
 {
-    public class Main : BloonsTD6Mod
+    public class Main : MelonMod
     {
         public override void OnApplicationStart()
         {
             base.OnApplicationStart();
-            MelonLogger.Msg("Mod has finished loading");
+            MelonLogger.Msg("UnlockAllMaps has finished loading");
         }
 
         [HarmonyPatch(typeof(MainMenu), "Open")]
